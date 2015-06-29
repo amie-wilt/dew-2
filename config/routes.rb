@@ -1,14 +1,9 @@
 Rails.application.routes.draw do
-  get 'order_items/create'
+  resources :products, only: [:index]
+  resource :cart, only: [:show]
+  resources :order_items, only: [:create, :update, :destroy ]
 
-  get 'order_items/update'
+  root to: 'products#index'
 
-  get 'order_items/destroy'
-
-  get 'carts/show'
-
-  get 'products/index'
-
-  root to: 'visitors#index'
   devise_for :users
 end
