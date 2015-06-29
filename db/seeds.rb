@@ -5,16 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-user = CreateAdminService.new.call
-puts 'CREATED ADMIN USER: ' << user.email
 # Environment variables (ENV['...']) can be set in the file .env file.
 
 require 'faker'
 
-42.times do
+30.times do
   product_name = Faker::Commerce.product_name
   Product.create!(name: product_name,
                   description: Faker::Hacker.say_something_smart,
                   price: (Faker::Commerce.price.to_f * 100).to_i,
-                  image: "http://loremflickr.com/640/480/#{product_name.split.last.downcase}
+                  permalink: Faker::Lorem.words,
+                  image: "http://loremflickr.com/640/480/#{product_name.split.last.downcase}")
 end

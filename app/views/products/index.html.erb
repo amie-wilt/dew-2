@@ -3,11 +3,15 @@
 
 
 <% @products.each do |p| %>
-    <div class="product-container">
-      <%= p.name %>
+  <div class="product-container">
+    <h1 class="product-name"><%= p.name %></h1>
+<span class="product-price">
+  <%= p.price %>
+</span>
+
+    <p class="production-description">
       <%= p.description %>
-      <%= p.price %>
-      <%= p.permalink %>
-      <%= p.image %>
-    </div>
+    </p>
+    <%= image_tag(p.image, :size => '50x50') %>
+  </div>
 <% end %>
