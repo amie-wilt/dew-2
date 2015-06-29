@@ -16,5 +16,5 @@ require 'faker'
   Product.create!(name: product_name,
                   description: Faker::Hacker.say_something_smart,
                   price: (Faker::Commerce.price.to_f * 100).to_i,
-                  image: "http://loremflickr.com/640/480/#{product_name.split.last.downcase}
+                  image: "http://loremflickr.com/640/480/#{product_name.split.last.downcase}")
 end
