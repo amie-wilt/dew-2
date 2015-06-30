@@ -16,7 +16,7 @@
       <%= render 'layouts/messages' %>
       <%= yield %>
     </main>
+    <%= render 'payola/transactions/checkout',
+               sellable: Product.first %>
   </body>
 </html>
-<%= render 'payola/transactions/checkout',
-           sellable: Product.first %>
