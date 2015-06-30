@@ -377,6 +377,7 @@ DEPENDENCIES
   hub
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   launchy
   newrelic_rpm
   payola-payments

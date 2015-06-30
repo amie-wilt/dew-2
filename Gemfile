@@ -14,6 +14,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'activeadmin', github: 'activeadmin'
 gem 'newrelic_rpm'
+gem 'kaminari'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
