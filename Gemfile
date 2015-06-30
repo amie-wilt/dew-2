@@ -11,6 +11,7 @@ gem 'payola-payments'
 gem 'faker'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'activeadmin', github: 'activeadmin'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
