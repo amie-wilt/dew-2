@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  ActiveAdmin.routes(self)
   mount Payola::Engine => '/payola', as: :payola
 
   resources :products, only: [:index]
