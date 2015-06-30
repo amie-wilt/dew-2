@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+
 ruby '2.2.2'
 gem 'rails', '4.2.2'
 gem 'sass-rails', '~> 5.0'
@@ -12,6 +13,7 @@ gem 'faker'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'activeadmin', github: 'activeadmin'
+gem 'newrelic_rpm'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
