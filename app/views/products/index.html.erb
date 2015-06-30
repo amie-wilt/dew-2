@@ -2,15 +2,20 @@
 <p>Find me in app/views/products/index.html.erb</p>
 
 
-<% @products.each do |p| %>
-    <div class="product-container">
-      <h1 class="product-name"><%= p.name %></h1>
+<div class="product-outer-container">
+  <% @products.each do |p| %>
+      <div class="product-container">
+        <h1 class="product-name"><%= p.name %></h1>
       <span class="product-price">
-        <%= number_to_currency(p.price/100) %>
+        <%= number_to_currency(p.price/10) %>
       </span>
-      <p class="production-description">
-        <%= p.description %>
-      </p>
-      <%= image_tag(p.image, :size => '50x50') %>
-    </div>
-<% end %>
+
+        <p class="production-description">
+          <%= p.description %>
+        </p>
+        <%= image_tag(p.image, :size => '150x150') %>
+        <%= render 'payola/transactions/checkout',
+                   sellable: p %>
+      </div>
+  <% end %>
+</div>
