@@ -14,12 +14,23 @@
  *= require_self
  */
 
+header {
+  margin-top: 10px;
+  padding-top: 15px;
+}
 
 .page-container {
   max-width: 960px;
   margin: 0 auto;
 }
 
+.page-title {
+  font-size: 4em;
+  text-align: center;
+  margin: 50px;
+  padding: 50px 0;
+  border-bottom: 1px solid green;
+}
 
 .product-outer-container {
   display: table;
@@ -32,5 +43,15 @@
   text-align: center;
   padding: 50px;
   box-sizing: border-box;
-  height: 380px;
+
+  .product-price {
+    font-size: 1.5em;
+    color: green;
+  }
+
+  img {
+    padding: 5px;
+    border: 1px solid gray;
+    margin-bottom: 20px;
+  }
 }
